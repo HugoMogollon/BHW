@@ -18,12 +18,13 @@ return [
     'after'                => ':attribute debe ser una fecha posterior a :date.',
     'after_or_equal'       => ':attribute debe ser una fecha posterior o igual a :date.',
     'alpha'                => ':attribute sólo debe contener letras.',
-    'alpha_dash'           => ':attribute sólo debe contener letras, números y guiones.',
     'alpha_num'            => ':attribute sólo debe contener letras y números.',
+		'alpha_dash'           => ':attribute sólo debe contener letras, números y guiones.',
     'array'                => ':attribute debe ser un conjunto.',
     'before'               => ':attribute debe ser una fecha anterior a :date.',
     'before_or_equal'      => ':attribute debe ser una fecha anterior o igual a :date.',
-    'between'              => [
+    'between'              =>
+	  [
         'numeric' => ':attribute tiene que estar entre :min - :max.',
         'file'    => ':attribute debe pesar entre :min - :max kilobytes.',
         'string'  => ':attribute tiene que tener entre :min - :max caracteres.',
@@ -50,7 +51,8 @@ return [
     'ipv4'                 => ':attribute debe ser un dirección IPv4 válida',
     'ipv6'                 => ':attribute debe ser un dirección IPv6 válida.',
     'json'                 => 'El campo :attribute debe tener una cadena JSON válida.',
-    'max'                  => [
+    'max'                  =>
+	  [
         'numeric' => ':attribute no debe ser mayor a :max.',
         'file'    => ':attribute no debe ser mayor que :max kilobytes.',
         'string'  => ':attribute no debe ser mayor que :max caracteres.',
@@ -58,7 +60,8 @@ return [
     ],
     'mimes'                => ':attribute debe ser un archivo con formato: :values.',
     'mimetypes'            => ':attribute debe ser un archivo con formato: :values.',
-    'min'                  => [
+    'min'                  =>
+	  [
         'numeric' => 'El tamaño de :attribute debe ser de al menos :min.',
         'file'    => 'El tamaño de :attribute debe ser de al menos :min kilobytes.',
         'string'  => ':attribute debe contener al menos :min caracteres.',
@@ -76,7 +79,8 @@ return [
     'required_without'     => 'El campo :attribute es obligatorio cuando :values no está presente.',
     'required_without_all' => 'El campo :attribute es obligatorio cuando ninguno de :values estén presentes.',
     'same'                 => ':attribute y :other deben coincidir.',
-    'size'                 => [
+    'size'                 =>
+	  [
         'numeric' => 'El tamaño de :attribute debe ser :size.',
         'file'    => 'El tamaño de :attribute debe ser :size kilobytes.',
         'string'  => ':attribute debe contener :size caracteres.',
@@ -99,13 +103,12 @@ return [
     |
     */
 
-    'custom'               => [
-        'password' => [
-            'min' => 'La :attribute debe contener más de :min caracteres',
-        ],
-        'email' => [
-            'unique' => 'El :attribute ya ha sido registrado.',
-        ],
+    'custom'               =>
+	  [
+        'password' =>
+	      ['min' => 'La :attribute debe contener más de :min caracteres',],
+        'email' =>
+	      ['unique' => 'El :attribute ya ha sido registrado.',],
     ],
 
     /*
@@ -119,7 +122,8 @@ return [
     |
     */
 
-    'attributes'           => [
+    'attributes'           =>
+	  [
         'name'                  => 'nombre',
         'username'              => 'usuario',
         'email'                 => 'correo electrónico',
@@ -151,5 +155,4 @@ return [
         'subject'               => 'asunto',
         'message'               => 'mensaje',
     ],
-
 ];
