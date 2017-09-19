@@ -36,7 +36,7 @@ class RouteServiceProvider extends ServiceProvider
     public function map()
     {
         $this->mapWebRoutes();
-
+        $this->mapWebDayanRoutes();
         //
     }
 
@@ -53,6 +53,15 @@ class RouteServiceProvider extends ServiceProvider
             'namespace' => $this->namespace, 'middleware' => 'web',
         ], function ($router) {
             require base_path('routes/web.php');
+        });
+    }
+
+     protected function mapWebDayanRoutes()
+    {
+        Route::group([
+            'namespace' => $this->namespace, 'middleware' => 'web',
+        ], function ($router) {
+            require base_path('routes/webDayan.php');
         });
     }
 

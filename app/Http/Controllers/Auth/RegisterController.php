@@ -50,7 +50,7 @@ class RegisterController extends Controller
 	{
 		return Validator::make($data,
 		[
-			'tipo_cuenta' => 'required',
+			'tipo_cuenta' => 'required|max:255',
 			'name'        => 'required|max:255',
 			'email'       => 'required|email|max:255|unique:users',
 			'password'    => 'required|min:6|confirmed',
@@ -65,6 +65,7 @@ class RegisterController extends Controller
 	 */
 	protected function create(array $data)
 	{
+		
 		return User::create(
 		[
 			'tipo_cuenta' => $data['tipo_cuenta'],
