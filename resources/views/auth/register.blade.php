@@ -14,20 +14,22 @@
     <!-- Custom Theme Style -->
     <link href="{{ asset("css/gentelella.min.css") }}" rel="stylesheet">
 	</head>
-	<body class="login">
+	<body class="login" onload="campos()">
 		<div class="login_wrapper">
 	    <div class="animate form login_form">
         <section class="login_content">
 					{!! BootForm::open(['url' => url('/register'), 'method' => 'post']) !!}
 					<h1>Crear Cuenta</h1>
-	        {!! BootForm::radios('tipo_cuenta', 'Tipo de cuenta', [1=> 'Personal', 2 =>'Empresarial'] , 2, true) !!}
+	        {!! BootForm::radios('tipo_usuario', 'Tipo de usuario', [1=> 'Cliente', 2 =>'Proveedor'] , 1, true) !!}
+	        <div id="tipo_cliente">
+		        {!! BootForm::radios('tipo_cliente', 'Tipo de cliente', [1=> 'Personal', 2 =>'Empresarial'] , 2, true) !!}
+	        </div>
 	        {!! BootForm::text('name', 'Nombre', old('name'), ['placeholder' => 'Ingresa tu nombre']) !!}
-	        {!! BootForm::text('name_business', 'Name de la Empresa', old('name_business'), ['placeholder' => 'Ingresa el nombre de la empresa']) !!}
 					{!! BootForm::email('email', 'Correo electrónico', old('email'), ['placeholder' => 'Ingresa el correo electrónico']) !!}
 					{!! BootForm::password('password', 'Contraseña', ['placeholder' => 'Ingresa la contraseña']) !!}
 					{!! BootForm::password('password_confirmation', 'Confirmación de contraseña', ['placeholder' => 'Vuelve a ingresar la contraseña']) !!}
 					{!! BootForm::submit('Crear cuenta', ['class' => 'btn btn-default']) !!}
-					<div class="clearfix"></div>
+	        <div class="clearfix"></div>
 					<div class="separator">
 						<p class="change_link">¿Ya tienes una cuenta?
 							<a href="{{ url('/login') }}" class="to_register">¡Ingresa ahora!</a>
@@ -44,8 +46,9 @@
 							<p>
 								Desarrollado por
 								<a href="http://www.CGH.com.co">
-									<b>C.G.H. Ingeniería</b>.
+									<b>C.G.H. Ingeniería</b>
 								</a>
+								.
 							</p>
 							<p>
 								Basado en el Template para Bootstrap y Laravel
@@ -60,5 +63,9 @@
         </section>
 	    </div>
 		</div>
+		<!-- Archivo JavaScrip BHW -->
+		<script type="text/javascript" src="{{ asset("js/BHW.js") }}"></script>
+		<!-- jQuery -->
+		<script type="text/javascript" src="{{ asset("js/jquery.min.js") }}"></script>
 	</body>
 </html>
