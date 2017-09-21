@@ -20,6 +20,8 @@
         <section class="login_content">
 					{!! BootForm::open(['url' => url('/register'), 'method' => 'post']) !!}
 					<h1>Crear Cuenta</h1>
+	        {!! BootForm::select('type_user','Tipo de usuario', [1 =>'Proveedor', 2 =>'Persona Natural', 3 =>'Persona Jurídica'])  !!}
+	       
 	        {!! BootForm::radios('tipo_usuario', 'Tipo de usuario', [1=> 'Cliente', 2 =>'Proveedor'] , 1, true) !!}
 	        <div id="tipo_cliente">
 		        {!! BootForm::radios('tipo_cliente', 'Tipo de cliente', [1=> 'Personal', 2 =>'Empresarial'] , 2, true) !!}
