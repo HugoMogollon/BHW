@@ -38,6 +38,7 @@
 						</p>
 						<div class="clearfix"></div>
 						<br/>
+						<!-- Inicio pie de página -->
 						<div>
 							<h1>Brain Healt and Work SAS</h1>
 							<p>
@@ -60,6 +61,7 @@
 								<i class="fa fa-paw"></i>
 							</p>
 						</div>
+						<!-- Fin pie de página -->
 					</div>
 					{!! BootForm::close() !!}
         </section>
