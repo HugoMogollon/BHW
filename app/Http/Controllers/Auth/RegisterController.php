@@ -6,6 +6,7 @@ use App\Models\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Caffeinated\Shinobi\Models\Role;
 
 class RegisterController extends Controller
 {
@@ -50,7 +51,7 @@ class RegisterController extends Controller
 	{
 		return Validator::make($data,
 		[
-			'tipo_cuenta' => 'required|max:255',
+			'type_user' => 'required',
 			'name'        => 'required|max:255',
 			'email'       => 'required|email|max:255|unique:users',
 			'password'    => 'required|min:6|confirmed',
@@ -65,13 +66,16 @@ class RegisterController extends Controller
 	 */
 	protected function create(array $data)
 	{
-		
-		return User::create(
+		$user=User::create(
 		[
-			'tipo_cuenta' => $data['tipo_cuenta'],
 			'name'        => $data['name'],
 			'email'       => $data['email'],
 			'password'    => bcrypt($data['password']),
 		]);
+		$idrol=$data['type_user'];
+		$user->assignRole($idrol);
+		return $user;
 	}
+
+	
 }
