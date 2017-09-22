@@ -5,24 +5,49 @@
  */
 
 /*!
+ * Estilos modificatorios de la pantalla de
+ * registro
+ */
+.login_content form select
+{
+	border-radius:  3px       !important;
+	color:          #777      !important;
+	margin:         0 0 20px  !important;
+	width:          100%      !important;
+	padding-left:   7px       !important;
+	border:         1px solid #c8c8c8;
+	-ms-box-shadow: 0 1px 0 #fff, 0 -2px 5px rgba(0,0,0,.08) inset;
+	 -o-box-shadow: 0 1px 0 #fff, 0 -2px 5px rgba(0,0,0,.08) inset;
+			box-shadow: 0 1px 0 #fff, 0 -2px 5px rgba(0,0,0,.08) inset;
+}
+
+/*!
  * Estilos modificatorios de la barra lateral
  */
 .profile_pic
 {
-	width:    100%    !important;
-	padding:  0 20px  !important;
+	width:          100%      !important;
+	padding:        0 20px    !important;
+	margin-top:     20px      !important;
+	text-align:     center    !important;
 }
+
+.profile_pic span
+{
+	font-size:      15px      !important;
+	font-style:     italic    !important;
+}
+
+.profile_pic img
+{margin:          5px 0     !important;}
 
 .profile_info
 {
-	width:          100%    !important;
-	text-align:     center  !important;
-	padding:        0       !important;
-	margin-bottom:  20px    !important;
+	width:          100%      !important;
+	text-align:     center    !important;
+	padding:        0         !important;
+	margin-bottom:  20px      !important;
 }
 
-.profile_info span
-{font-size: 15px !important;}
-
 .profile_info h2
-{font-size: 18px !important;}
+{font-size:       18px      !important;}

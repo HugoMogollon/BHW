@@ -11,8 +11,10 @@
     <link href="{{ asset("css/bootstrap.min.css") }}" rel="stylesheet">
     <!-- Font Awesome -->
     <link href="{{ asset("css/font-awesome.min.css") }}" rel="stylesheet">
-    <!-- Custom Theme Style -->
-    <link href="{{ asset("css/gentelella.min.css") }}" rel="stylesheet">
+		<!-- Custom Theme Style -->
+		<link href="{{ asset("css/gentelella.min.css") }}" rel="stylesheet">
+		<!-- CSS BHW -->
+		<link href="{{ asset("css/BHW.css") }}" rel="stylesheet">
 	</head>
 	<body class="login" onload="campos()">
 		<div class="login_wrapper">
@@ -20,12 +22,7 @@
         <section class="login_content">
 					{!! BootForm::open(['url' => url('/register'), 'method' => 'post']) !!}
 					<h1>Crear Cuenta</h1>
-	        {!! BootForm::select('type_user','Tipo de usuario', [1 =>'Proveedor', 2 =>'Persona Natural', 3 =>'Persona Jurídica'])  !!}
-	       
-	        {!! BootForm::radios('tipo_usuario', 'Tipo de usuario', [1=> 'Cliente', 2 =>'Proveedor'] , 1, true) !!}
-	        <div id="tipo_cliente">
-		        {!! BootForm::radios('tipo_cliente', 'Tipo de cliente', [1=> 'Personal', 2 =>'Empresarial'] , 2, true) !!}
-	        </div>
+	        {!! BootForm::select('tipo_usuario','Tipo de usuario', [1 =>'Cliente: Persona natural', 2 =>'Cliente: Persona jurídica', 3 =>'Proveedor'], null, ['placeholder' => 'Selecciona el tipo de usuario a registrar'])  !!}
 	        {!! BootForm::text('name', 'Nombre', old('name'), ['placeholder' => 'Ingresa tu nombre']) !!}
 					{!! BootForm::email('email', 'Correo electrónico', old('email'), ['placeholder' => 'Ingresa el correo electrónico']) !!}
 					{!! BootForm::password('password', 'Contraseña', ['placeholder' => 'Ingresa la contraseña']) !!}
