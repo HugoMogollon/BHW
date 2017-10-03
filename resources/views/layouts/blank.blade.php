@@ -13,7 +13,7 @@
     <link href="{{ asset("css/font-awesome.min.css") }}" rel="stylesheet">
 	  <!-- Custom Theme Style -->
 	  <link href="{{ asset("css/gentelella.min-ext.css") }}" rel="stylesheet">
-	  <!-- Custom Theme Style -->
+	  <!-- CSS BHW -->
 	  <link href="{{ asset("css/BHW.css") }}" rel="stylesheet">
     @stack('stylesheets')
   </head>

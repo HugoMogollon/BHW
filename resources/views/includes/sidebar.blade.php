@@ -9,10 +9,10 @@
     <!-- menu profile quick info -->
     <div class="profile">
 	    <div class="profile_pic">
+		    <span>Bienvenido,</span>
 		    <img src="{{ Gravatar::src(Auth::user()->email) }}" alt="Avatar of {{ Auth::user()->name }}" class="img-circle profile_img">
 	    </div>
 	    <div class="profile_info">
-		    <span>Bienvenido,</span>
 		    <h2>{{ Auth::user()->name }}</h2>
 	    </div>
     </div>
