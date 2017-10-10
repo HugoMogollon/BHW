@@ -16,8 +16,10 @@
           </a>
           <ul class="dropdown-menu dropdown-usermenu pull-right">
             <li>
-	            <a href="javascript:;">
+            <a href="{{ url('/perfil_usuario') }}">
+	            <!--<a href="javascript:;">-->
 		            Perfil
+                
 		            <span class="badge bg-red">50%</span>
 		            <i class="fa fa-pencil-square-o pull-right"></i>
 	            </a>

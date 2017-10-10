@@ -22,7 +22,7 @@
         <section class="login_content">
 					{!! BootForm::open(['url' => url('/register'), 'method' => 'post']) !!}
 					<h1>Crear Cuenta</h1>
-	        {!! BootForm::select('tipo_usuario','Tipo de usuario', [1 =>'Cliente: Persona natural', 2 =>'Cliente: Persona jurídica', 3 =>'Proveedor'], null, ['placeholder' => 'Selecciona el tipo de usuario a registrar'])  !!}
+	        {!! BootForm::select('type_user','Tipo de usuario', [1 =>'Cliente: Persona natural', 2 =>'Cliente: Persona jurídica', 3 =>'Proveedor'], null, ['placeholder' => 'Selecciona el tipo de usuario a registrar'])  !!}
 	        {!! BootForm::text('name', 'Nombre', old('name'), ['placeholder' => 'Ingresa tu nombre']) !!}
 					{!! BootForm::email('email', 'Correo electrónico', old('email'), ['placeholder' => 'Ingresa el correo electrónico']) !!}
 					{!! BootForm::password('password', 'Contraseña', ['placeholder' => 'Ingresa la contraseña']) !!}
