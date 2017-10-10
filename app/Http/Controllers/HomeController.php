@@ -27,4 +27,12 @@ class HomeController extends Controller
 	    //return view('home'); //Original
 	    return view('dashboard'); //Modificado
     }
+
+    public function perfil_usuario(){
+    //carga el formulario para agregar un nuevo usuario
+   //$roles=Role::all();
+    return view("layouts.usperfil");
+
+        }    
+
 }
